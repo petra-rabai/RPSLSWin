@@ -16,5 +16,17 @@ namespace RPSLSWin
         {
             InitializeComponent();
         }
+
+        private void buttonQuit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonNewUserRegister_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            FormUserRegistration formUserRegistration = new FormUserRegistration();
+            formUserRegistration.Show();
+        }
     }
 }

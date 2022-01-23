@@ -30,7 +30,8 @@ namespace RPSLSWin
         {
             if (progressBarLoadMainScreen.Value <100)
             {
-                progressBarLoadMainScreen.Value++; 
+                progressBarLoadMainScreen.Value++;
+                labelLoadingPercent.Text = progressBarLoadMainScreen.Value.ToString() + " %";
             }
             else
             {
@@ -38,6 +39,7 @@ namespace RPSLSWin
                 buttonQuitApp.Visible = true;
                 buttonStartApp.Visible = true;
                 progressBarLoadMainScreen.Visible = false;
+                labelLoadingPercent.Visible = false;
             }
         }
 

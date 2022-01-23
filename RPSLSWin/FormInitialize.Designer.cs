@@ -30,15 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelLoadMainScreen = new System.Windows.Forms.Panel();
+            this.buttonStartApp = new System.Windows.Forms.Button();
+            this.buttonQuitApp = new System.Windows.Forms.Button();
             this.progressBarLoadMainScreen = new System.Windows.Forms.ProgressBar();
             this.timerLoading = new System.Windows.Forms.Timer(this.components);
-            this.buttonQuitApp = new System.Windows.Forms.Button();
-            this.buttonStartApp = new System.Windows.Forms.Button();
+            this.labelLoadingPercent = new System.Windows.Forms.Label();
             this.panelLoadMainScreen.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLoadMainScreen
             // 
+            this.panelLoadMainScreen.BackColor = System.Drawing.SystemColors.Control;
+            this.panelLoadMainScreen.Controls.Add(this.labelLoadingPercent);
             this.panelLoadMainScreen.Controls.Add(this.buttonStartApp);
             this.panelLoadMainScreen.Controls.Add(this.buttonQuitApp);
             this.panelLoadMainScreen.Controls.Add(this.progressBarLoadMainScreen);
@@ -46,6 +49,28 @@
             this.panelLoadMainScreen.Name = "panelLoadMainScreen";
             this.panelLoadMainScreen.Size = new System.Drawing.Size(391, 136);
             this.panelLoadMainScreen.TabIndex = 0;
+            // 
+            // buttonStartApp
+            // 
+            this.buttonStartApp.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStartApp.Location = new System.Drawing.Point(3, 101);
+            this.buttonStartApp.Name = "buttonStartApp";
+            this.buttonStartApp.Size = new System.Drawing.Size(132, 32);
+            this.buttonStartApp.TabIndex = 2;
+            this.buttonStartApp.Text = "Start";
+            this.buttonStartApp.UseVisualStyleBackColor = true;
+            this.buttonStartApp.Click += new System.EventHandler(this.buttonStartApp_Click);
+            // 
+            // buttonQuitApp
+            // 
+            this.buttonQuitApp.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonQuitApp.Location = new System.Drawing.Point(255, 101);
+            this.buttonQuitApp.Name = "buttonQuitApp";
+            this.buttonQuitApp.Size = new System.Drawing.Size(132, 32);
+            this.buttonQuitApp.TabIndex = 1;
+            this.buttonQuitApp.Text = "Quit";
+            this.buttonQuitApp.UseVisualStyleBackColor = true;
+            this.buttonQuitApp.Click += new System.EventHandler(this.buttonQuitApp_Click);
             // 
             // progressBarLoadMainScreen
             // 
@@ -58,25 +83,16 @@
             // 
             this.timerLoading.Tick += new System.EventHandler(this.timerLoading_Tick);
             // 
-            // buttonQuitApp
+            // labelLoadingPercent
             // 
-            this.buttonQuitApp.Location = new System.Drawing.Point(313, 101);
-            this.buttonQuitApp.Name = "buttonQuitApp";
-            this.buttonQuitApp.Size = new System.Drawing.Size(75, 32);
-            this.buttonQuitApp.TabIndex = 1;
-            this.buttonQuitApp.Text = "Quit";
-            this.buttonQuitApp.UseVisualStyleBackColor = true;
-            this.buttonQuitApp.Click += new System.EventHandler(this.buttonQuitApp_Click);
-            // 
-            // buttonStartApp
-            // 
-            this.buttonStartApp.Location = new System.Drawing.Point(3, 101);
-            this.buttonStartApp.Name = "buttonStartApp";
-            this.buttonStartApp.Size = new System.Drawing.Size(75, 32);
-            this.buttonStartApp.TabIndex = 2;
-            this.buttonStartApp.Text = "Start";
-            this.buttonStartApp.UseVisualStyleBackColor = true;
-            this.buttonStartApp.Click += new System.EventHandler(this.buttonStartApp_Click);
+            this.labelLoadingPercent.AutoSize = true;
+            this.labelLoadingPercent.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoadingPercent.Location = new System.Drawing.Point(173, 59);
+            this.labelLoadingPercent.Name = "labelLoadingPercent";
+            this.labelLoadingPercent.Size = new System.Drawing.Size(29, 17);
+            this.labelLoadingPercent.TabIndex = 3;
+            this.labelLoadingPercent.Text = "0%";
+            this.labelLoadingPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormInitialize
             // 
@@ -89,6 +105,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormInitialize_Load);
             this.panelLoadMainScreen.ResumeLayout(false);
+            this.panelLoadMainScreen.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -100,6 +117,7 @@
         private System.Windows.Forms.Timer timerLoading;
         private System.Windows.Forms.Button buttonStartApp;
         private System.Windows.Forms.Button buttonQuitApp;
+        private System.Windows.Forms.Label labelLoadingPercent;
     }
 }
 

@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxUserName = new System.Windows.Forms.TextBox();
-            this.labelUserName = new System.Windows.Forms.Label();
-            this.buttonUserLogin = new System.Windows.Forms.Button();
-            this.labelUserPassword = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.buttonNewUserRegister = new System.Windows.Forms.Button();
-            this.buttonQuit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelUserName = new System.Windows.Forms.Label();
+            this.buttonNewUserRegister = new System.Windows.Forms.Button();
+            this.textBoxUserName = new System.Windows.Forms.TextBox();
+            this.labelUserPassword = new System.Windows.Forms.Label();
+            this.buttonUserLogin = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonQuit = new System.Windows.Forms.Button();
+            this.labelLoginWindow = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -44,19 +45,25 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.labelLoginWindow);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 311);
             this.panel1.TabIndex = 0;
             // 
-            // textBoxUserName
+            // panel2
             // 
-            this.textBoxUserName.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUserName.Location = new System.Drawing.Point(49, 49);
-            this.textBoxUserName.Name = "textBoxUserName";
-            this.textBoxUserName.Size = new System.Drawing.Size(194, 29);
-            this.textBoxUserName.TabIndex = 1;
+            this.panel2.Controls.Add(this.labelUserName);
+            this.panel2.Controls.Add(this.buttonNewUserRegister);
+            this.panel2.Controls.Add(this.textBoxUserName);
+            this.panel2.Controls.Add(this.labelUserPassword);
+            this.panel2.Controls.Add(this.buttonUserLogin);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Location = new System.Drawing.Point(51, 28);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(277, 276);
+            this.panel2.TabIndex = 8;
             // 
             // labelUserName
             // 
@@ -68,15 +75,24 @@
             this.labelUserName.TabIndex = 2;
             this.labelUserName.Text = "User name: ";
             // 
-            // buttonUserLogin
+            // buttonNewUserRegister
             // 
-            this.buttonUserLogin.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUserLogin.Location = new System.Drawing.Point(84, 177);
-            this.buttonUserLogin.Name = "buttonUserLogin";
-            this.buttonUserLogin.Size = new System.Drawing.Size(132, 32);
-            this.buttonUserLogin.TabIndex = 3;
-            this.buttonUserLogin.Text = "Login";
-            this.buttonUserLogin.UseVisualStyleBackColor = true;
+            this.buttonNewUserRegister.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNewUserRegister.Location = new System.Drawing.Point(84, 215);
+            this.buttonNewUserRegister.Name = "buttonNewUserRegister";
+            this.buttonNewUserRegister.Size = new System.Drawing.Size(132, 32);
+            this.buttonNewUserRegister.TabIndex = 7;
+            this.buttonNewUserRegister.Text = "Registration";
+            this.buttonNewUserRegister.UseVisualStyleBackColor = true;
+            this.buttonNewUserRegister.Click += new System.EventHandler(this.buttonNewUserRegister_Click);
+            // 
+            // textBoxUserName
+            // 
+            this.textBoxUserName.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUserName.Location = new System.Drawing.Point(49, 49);
+            this.textBoxUserName.Name = "textBoxUserName";
+            this.textBoxUserName.Size = new System.Drawing.Size(194, 29);
+            this.textBoxUserName.TabIndex = 1;
             // 
             // labelUserPassword
             // 
@@ -88,6 +104,16 @@
             this.labelUserPassword.TabIndex = 6;
             this.labelUserPassword.Text = "User password: ";
             // 
+            // buttonUserLogin
+            // 
+            this.buttonUserLogin.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUserLogin.Location = new System.Drawing.Point(84, 177);
+            this.buttonUserLogin.Name = "buttonUserLogin";
+            this.buttonUserLogin.Size = new System.Drawing.Size(132, 32);
+            this.buttonUserLogin.TabIndex = 3;
+            this.buttonUserLogin.Text = "Login";
+            this.buttonUserLogin.UseVisualStyleBackColor = true;
+            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,16 +122,6 @@
             this.textBox1.PasswordChar = '#';
             this.textBox1.Size = new System.Drawing.Size(194, 29);
             this.textBox1.TabIndex = 5;
-            // 
-            // buttonNewUserRegister
-            // 
-            this.buttonNewUserRegister.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNewUserRegister.Location = new System.Drawing.Point(84, 215);
-            this.buttonNewUserRegister.Name = "buttonNewUserRegister";
-            this.buttonNewUserRegister.Size = new System.Drawing.Size(132, 32);
-            this.buttonNewUserRegister.TabIndex = 7;
-            this.buttonNewUserRegister.Text = "Registration";
-            this.buttonNewUserRegister.UseVisualStyleBackColor = true;
             // 
             // buttonQuit
             // 
@@ -116,19 +132,17 @@
             this.buttonQuit.TabIndex = 8;
             this.buttonQuit.Text = "Quit";
             this.buttonQuit.UseVisualStyleBackColor = true;
+            this.buttonQuit.Click += new System.EventHandler(this.buttonQuit_Click);
             // 
-            // panel2
+            // labelLoginWindow
             // 
-            this.panel2.Controls.Add(this.labelUserName);
-            this.panel2.Controls.Add(this.buttonNewUserRegister);
-            this.panel2.Controls.Add(this.textBoxUserName);
-            this.panel2.Controls.Add(this.labelUserPassword);
-            this.panel2.Controls.Add(this.buttonUserLogin);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(51, 15);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(277, 276);
-            this.panel2.TabIndex = 8;
+            this.labelLoginWindow.AutoSize = true;
+            this.labelLoginWindow.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoginWindow.Location = new System.Drawing.Point(158, 2);
+            this.labelLoginWindow.Name = "labelLoginWindow";
+            this.labelLoginWindow.Size = new System.Drawing.Size(63, 24);
+            this.labelLoginWindow.TabIndex = 9;
+            this.labelLoginWindow.Text = "Login";
             // 
             // FormGameMainUI
             // 
@@ -138,12 +152,12 @@
             this.ControlBox = false;
             this.Controls.Add(this.buttonQuit);
             this.Controls.Add(this.panel1);
-            this.Enabled = false;
             this.Name = "FormGameMainUI";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -161,5 +175,6 @@
         private System.Windows.Forms.Button buttonUserLogin;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonQuit;
+        private System.Windows.Forms.Label labelLoginWindow;
     }
 }
