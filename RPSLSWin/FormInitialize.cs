@@ -51,7 +51,7 @@ namespace RPSLSWin
         private void buttonStartApp_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            FormGameMainUI formGameMain = new FormGameMainUI();
+            FormUserLogin formGameMain = new FormUserLogin();
             formGameMain.Show();  
         }
     }

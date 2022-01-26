@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,11 +62,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormGameMainUI.cs">
+    <Compile Include="ISQLActionData.cs" />
+    <Compile Include="ISQLActionInsertData.cs" />
+    <Compile Include="ISQLActionSelectData.cs" />
+    <Compile Include="ISQLConnectionClose.cs" />
+    <Compile Include="ISQLConnectionData.cs" />
+    <Compile Include="ISQLConnectionOpen.cs" />
+    <Compile Include="SQLActionInsertData.cs" />
+    <Compile Include="SQLActionSelectData.cs" />
+    <Compile Include="SQLConnectionClose.cs" />
+    <Compile Include="SQLConnectionData.cs" />
+    <Compile Include="SQLConnectionOpen.cs" />
+    <Compile Include="FormUserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGameMainUI.Designer.cs">
-      <DependentUpon>FormGameMainUI.cs</DependentUpon>
+    <Compile Include="FormUserLogin.Designer.cs">
+      <DependentUpon>FormUserLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInitialize.cs">
       <SubType>Form</SubType>
@@ -66,8 +93,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormGameMainUI.resx">
-      <DependentUpon>FormGameMainUI.cs</DependentUpon>
+    <Compile Include="RPSLSDB_PrimaryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPSLSDB_PrimaryDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormUserLogin.resx">
+      <DependentUpon>FormUserLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInitialize.resx">
       <DependentUpon>FormInitialize.cs</DependentUpon>
@@ -93,9 +125,41 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RPSLSDB_PrimaryDataSet.xsc">
+      <DependentUpon>RPSLSDB_PrimaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RPSLSDB_PrimaryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RPSLSDB_PrimaryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RPSLSDB_PrimaryDataSet.xss">
+      <DependentUpon>RPSLSDB_PrimaryDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RPSLSDB_Primary.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RPSLSDB_Primary_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>RPSLSDB_Primary.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
