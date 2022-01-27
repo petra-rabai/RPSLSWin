@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace RPSLSWin {
+namespace RPSLSWin.Database {
     
     
     /// <summary>
@@ -20,9 +20,9 @@ namespace RPSLSWin {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("RPSLSDB_PrimaryDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("GAMEDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class RPSLSDB_PrimaryDataSet : global::System.Data.DataSet {
+    public partial class GAMEDataSet : global::System.Data.DataSet {
         
         private UserDataTable tableUser;
         
@@ -30,7 +30,7 @@ namespace RPSLSWin {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public RPSLSDB_PrimaryDataSet() {
+        public GAMEDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace RPSLSWin {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected RPSLSDB_PrimaryDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected GAMEDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace RPSLSWin {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            RPSLSDB_PrimaryDataSet cln = ((RPSLSDB_PrimaryDataSet)(base.Clone()));
+            GAMEDataSet cln = ((GAMEDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace RPSLSWin {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "RPSLSDB_PrimaryDataSet";
+            this.DataSetName = "GAMEDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/RPSLSDB_PrimaryDataSet.xsd";
+            this.Namespace = "http://tempuri.org/GAMEDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableUser = new UserDataTable();
@@ -225,7 +225,7 @@ namespace RPSLSWin {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            RPSLSDB_PrimaryDataSet ds = new RPSLSDB_PrimaryDataSet();
+            GAMEDataSet ds = new GAMEDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -279,13 +279,13 @@ namespace RPSLSWin {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class UserDataTable : global::System.Data.TypedTableBase<UserRow> {
             
-            private global::System.Data.DataColumn columnId;
+            private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columnUser_name;
+            private global::System.Data.DataColumn columnUserName;
             
-            private global::System.Data.DataColumn columnUser_password;
+            private global::System.Data.DataColumn columnUserPassword;
             
-            private global::System.Data.DataColumn _columnUser_e_mail_address;
+            private global::System.Data.DataColumn columnUserEmail;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -322,33 +322,33 @@ namespace RPSLSWin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn idColumn {
                 get {
-                    return this.columnId;
+                    return this.columnid;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn User_nameColumn {
+            public global::System.Data.DataColumn UserNameColumn {
                 get {
-                    return this.columnUser_name;
+                    return this.columnUserName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn User_passwordColumn {
+            public global::System.Data.DataColumn UserPasswordColumn {
                 get {
-                    return this.columnUser_password;
+                    return this.columnUserPassword;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn _User_e_mail_addressColumn {
+            public global::System.Data.DataColumn UserEmailColumn {
                 get {
-                    return this._columnUser_e_mail_address;
+                    return this.columnUserEmail;
                 }
             }
             
@@ -389,13 +389,13 @@ namespace RPSLSWin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRow AddUserRow(string User_name, string User_password, string _User_e_mail_address) {
+            public UserRow AddUserRow(string UserName, string UserPassword, string UserEmail) {
                 UserRow rowUserRow = ((UserRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        User_name,
-                        User_password,
-                        _User_e_mail_address};
+                        UserName,
+                        UserPassword,
+                        UserEmail};
                 rowUserRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUserRow);
                 return rowUserRow;
@@ -403,9 +403,9 @@ namespace RPSLSWin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRow FindById(int Id) {
+            public UserRow FindByid(int id) {
                 return ((UserRow)(this.Rows.Find(new object[] {
-                            Id})));
+                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -425,39 +425,37 @@ namespace RPSLSWin {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columnUser_name = base.Columns["User name"];
-                this.columnUser_password = base.Columns["User password"];
-                this._columnUser_e_mail_address = base.Columns["User e-mail address"];
+                this.columnid = base.Columns["id"];
+                this.columnUserName = base.Columns["UserName"];
+                this.columnUserPassword = base.Columns["UserPassword"];
+                this.columnUserEmail = base.Columns["UserEmail"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columnUser_name = new global::System.Data.DataColumn("User name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUser_name);
-                this.columnUser_password = new global::System.Data.DataColumn("User password", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUser_password);
-                this._columnUser_e_mail_address = new global::System.Data.DataColumn("User e-mail address", typeof(string), null, global::System.Data.MappingType.Element);
-                this._columnUser_e_mail_address.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnUser_e_mail_address");
-                this._columnUser_e_mail_address.ExtendedProperties.Add("Generator_UserColumnName", "User e-mail address");
-                base.Columns.Add(this._columnUser_e_mail_address);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnUserName = new global::System.Data.DataColumn("UserName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserName);
+                this.columnUserPassword = new global::System.Data.DataColumn("UserPassword", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserPassword);
+                this.columnUserEmail = new global::System.Data.DataColumn("UserEmail", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserEmail);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
-                this.columnId.AllowDBNull = false;
-                this.columnId.ReadOnly = true;
-                this.columnId.Unique = true;
-                this.columnUser_name.AllowDBNull = false;
-                this.columnUser_name.MaxLength = 30;
-                this.columnUser_password.AllowDBNull = false;
-                this.columnUser_password.MaxLength = 20;
-                this._columnUser_e_mail_address.AllowDBNull = false;
-                this._columnUser_e_mail_address.MaxLength = 20;
+                                this.columnid}, true));
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
+                this.columnid.AllowDBNull = false;
+                this.columnid.ReadOnly = true;
+                this.columnid.Unique = true;
+                this.columnUserName.AllowDBNull = false;
+                this.columnUserName.MaxLength = 30;
+                this.columnUserPassword.AllowDBNull = false;
+                this.columnUserPassword.MaxLength = 10;
+                this.columnUserEmail.AllowDBNull = false;
+                this.columnUserEmail.MaxLength = 30;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -525,7 +523,7 @@ namespace RPSLSWin {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                RPSLSDB_PrimaryDataSet ds = new RPSLSDB_PrimaryDataSet();
+                GAMEDataSet ds = new GAMEDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -600,45 +598,45 @@ namespace RPSLSWin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Id {
+            public int id {
                 get {
-                    return ((int)(this[this.tableUser.IdColumn]));
+                    return ((int)(this[this.tableUser.idColumn]));
                 }
                 set {
-                    this[this.tableUser.IdColumn] = value;
+                    this[this.tableUser.idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string User_name {
+            public string UserName {
                 get {
-                    return ((string)(this[this.tableUser.User_nameColumn]));
+                    return ((string)(this[this.tableUser.UserNameColumn]));
                 }
                 set {
-                    this[this.tableUser.User_nameColumn] = value;
+                    this[this.tableUser.UserNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string User_password {
+            public string UserPassword {
                 get {
-                    return ((string)(this[this.tableUser.User_passwordColumn]));
+                    return ((string)(this[this.tableUser.UserPasswordColumn]));
                 }
                 set {
-                    this[this.tableUser.User_passwordColumn] = value;
+                    this[this.tableUser.UserPasswordColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string _User_e_mail_address {
+            public string UserEmail {
                 get {
-                    return ((string)(this[this.tableUser._User_e_mail_addressColumn]));
+                    return ((string)(this[this.tableUser.UserEmailColumn]));
                 }
                 set {
-                    this[this.tableUser._User_e_mail_addressColumn] = value;
+                    this[this.tableUser.UserEmailColumn] = value;
                 }
             }
         }
@@ -678,7 +676,7 @@ namespace RPSLSWin {
         }
     }
 }
-namespace RPSLSWin.RPSLSDB_PrimaryDataSetTableAdapters {
+namespace RPSLSWin.Database.GAMEDataSetTableAdapters {
     
     
     /// <summary>
@@ -802,50 +800,50 @@ namespace RPSLSWin.RPSLSDB_PrimaryDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "User";
-            tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("User name", "User name");
-            tableMapping.ColumnMappings.Add("User password", "User password");
-            tableMapping.ColumnMappings.Add("User e-mail address", "User e-mail address");
+            tableMapping.ColumnMappings.Add("id", "id");
+            tableMapping.ColumnMappings.Add("UserName", "UserName");
+            tableMapping.ColumnMappings.Add("UserPassword", "UserPassword");
+            tableMapping.ColumnMappings.Add("UserEmail", "UserEmail");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[User] WHERE (([Id] = @Original_Id) AND ([User name] = @Origina" +
-                "l_User_name) AND ([User password] = @Original_User_password) AND ([User e-mail a" +
-                "ddress] = @p2))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[User] WHERE (([id] = @Original_id) AND ([UserName] = @Original" +
+                "_UserName) AND ([UserPassword] = @Original_UserPassword) AND ([UserEmail] = @Ori" +
+                "ginal_UserEmail))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_User_name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_User_password", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User e-mail address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserName", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserPassword", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserPassword", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserEmail", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserEmail", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[User] ([User name], [User password], [User e-mail address]) VA" +
-                "LUES (@User_name, @User_password, @p1);\r\nSELECT Id, [User name], [User password]" +
-                ", [User e-mail address] FROM [User] WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[User] ([UserName], [UserPassword], [UserEmail]) VALUES (@UserN" +
+                "ame, @UserPassword, @UserEmail);\r\nSELECT id, UserName, UserPassword, UserEmail F" +
+                "ROM [User] WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@User_name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@User_password", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User e-mail address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserName", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserPassword", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserPassword", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserEmail", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserEmail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[User] SET [User name] = @User_name, [User password] = @User_password, [User e-mail address] = @p1 WHERE (([Id] = @Original_Id) AND ([User name] = @Original_User_name) AND ([User password] = @Original_User_password) AND ([User e-mail address] = @p2));
-SELECT Id, [User name], [User password], [User e-mail address] FROM [User] WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[User] SET [UserName] = @UserName, [UserPassword] = @UserPassword, [UserEmail] = @UserEmail WHERE (([id] = @Original_id) AND ([UserName] = @Original_UserName) AND ([UserPassword] = @Original_UserPassword) AND ([UserEmail] = @Original_UserEmail));
+SELECT id, UserName, UserPassword, UserEmail FROM [User] WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@User_name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@User_password", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User e-mail address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_User_name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_User_password", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User e-mail address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserName", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserPassword", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserPassword", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserEmail", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserEmail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserName", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserPassword", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserPassword", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserEmail", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserEmail", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::RPSLSWin.Properties.Settings.Default.RPSLSDB_PrimaryConnectionString;
+            this._connection.ConnectionString = global::RPSLSWin.Properties.Settings.Default.GAMEConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -854,7 +852,7 @@ SELECT Id, [User name], [User password], [User e-mail address] FROM [User] WHERE
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, [User name], [User password], [User e-mail address] FROM dbo.[User]";
+            this._commandCollection[0].CommandText = "SELECT id, UserName, UserPassword, UserEmail FROM dbo.[User]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -862,7 +860,7 @@ SELECT Id, [User name], [User password], [User e-mail address] FROM [User] WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(RPSLSDB_PrimaryDataSet.UserDataTable dataTable) {
+        public virtual int Fill(GAMEDataSet.UserDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -875,9 +873,9 @@ SELECT Id, [User name], [User password], [User e-mail address] FROM [User] WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual RPSLSDB_PrimaryDataSet.UserDataTable GetData() {
+        public virtual GAMEDataSet.UserDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            RPSLSDB_PrimaryDataSet.UserDataTable dataTable = new RPSLSDB_PrimaryDataSet.UserDataTable();
+            GAMEDataSet.UserDataTable dataTable = new GAMEDataSet.UserDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -885,14 +883,14 @@ SELECT Id, [User name], [User password], [User e-mail address] FROM [User] WHERE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(RPSLSDB_PrimaryDataSet.UserDataTable dataTable) {
+        public virtual int Update(GAMEDataSet.UserDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(RPSLSDB_PrimaryDataSet dataSet) {
+        public virtual int Update(GAMEDataSet dataSet) {
             return this.Adapter.Update(dataSet, "User");
         }
         
@@ -915,25 +913,25 @@ SELECT Id, [User name], [User password], [User e-mail address] FROM [User] WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_User_name, string Original_User_password, string p2) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            if ((Original_User_name == null)) {
-                throw new global::System.ArgumentNullException("Original_User_name");
+        public virtual int Delete(int Original_id, string Original_UserName, string Original_UserPassword, string Original_UserEmail) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
+            if ((Original_UserName == null)) {
+                throw new global::System.ArgumentNullException("Original_UserName");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_User_name));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_UserName));
             }
-            if ((Original_User_password == null)) {
-                throw new global::System.ArgumentNullException("Original_User_password");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_User_password));
-            }
-            if ((p2 == null)) {
-                throw new global::System.ArgumentNullException("p2");
+            if ((Original_UserPassword == null)) {
+                throw new global::System.ArgumentNullException("Original_UserPassword");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(p2));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_UserPassword));
+            }
+            if ((Original_UserEmail == null)) {
+                throw new global::System.ArgumentNullException("Original_UserEmail");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_UserEmail));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -955,24 +953,24 @@ SELECT Id, [User name], [User password], [User e-mail address] FROM [User] WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string User_name, string User_password, string p1) {
-            if ((User_name == null)) {
-                throw new global::System.ArgumentNullException("User_name");
+        public virtual int Insert(string UserName, string UserPassword, string UserEmail) {
+            if ((UserName == null)) {
+                throw new global::System.ArgumentNullException("UserName");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(User_name));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(UserName));
             }
-            if ((User_password == null)) {
-                throw new global::System.ArgumentNullException("User_password");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(User_password));
-            }
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
+            if ((UserPassword == null)) {
+                throw new global::System.ArgumentNullException("UserPassword");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(p1));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(UserPassword));
+            }
+            if ((UserEmail == null)) {
+                throw new global::System.ArgumentNullException("UserEmail");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(UserEmail));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -994,45 +992,45 @@ SELECT Id, [User name], [User password], [User e-mail address] FROM [User] WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string User_name, string User_password, string p1, int Original_Id, string Original_User_name, string Original_User_password, string p2, int Id) {
-            if ((User_name == null)) {
-                throw new global::System.ArgumentNullException("User_name");
+        public virtual int Update(string UserName, string UserPassword, string UserEmail, int Original_id, string Original_UserName, string Original_UserPassword, string Original_UserEmail, int id) {
+            if ((UserName == null)) {
+                throw new global::System.ArgumentNullException("UserName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(User_name));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(UserName));
             }
-            if ((User_password == null)) {
-                throw new global::System.ArgumentNullException("User_password");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(User_password));
-            }
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
+            if ((UserPassword == null)) {
+                throw new global::System.ArgumentNullException("UserPassword");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p1));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(UserPassword));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
-            if ((Original_User_name == null)) {
-                throw new global::System.ArgumentNullException("Original_User_name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_User_name));
-            }
-            if ((Original_User_password == null)) {
-                throw new global::System.ArgumentNullException("Original_User_password");
+            if ((UserEmail == null)) {
+                throw new global::System.ArgumentNullException("UserEmail");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_User_password));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(UserEmail));
             }
-            if ((p2 == null)) {
-                throw new global::System.ArgumentNullException("p2");
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_id));
+            if ((Original_UserName == null)) {
+                throw new global::System.ArgumentNullException("Original_UserName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(p2));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_UserName));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Id));
+            if ((Original_UserPassword == null)) {
+                throw new global::System.ArgumentNullException("Original_UserPassword");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_UserPassword));
+            }
+            if ((Original_UserEmail == null)) {
+                throw new global::System.ArgumentNullException("Original_UserEmail");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_UserEmail));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1053,8 +1051,8 @@ SELECT Id, [User name], [User password], [User e-mail address] FROM [User] WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string User_name, string User_password, string p1, int Original_Id, string Original_User_name, string Original_User_password, string p2) {
-            return this.Update(User_name, User_password, p1, Original_Id, Original_User_name, Original_User_password, p2, Original_Id);
+        public virtual int Update(string UserName, string UserPassword, string UserEmail, int Original_id, string Original_UserName, string Original_UserPassword, string Original_UserEmail) {
+            return this.Update(UserName, UserPassword, UserEmail, Original_id, Original_UserName, Original_UserPassword, Original_UserEmail, Original_id);
         }
     }
     
@@ -1149,7 +1147,7 @@ SELECT Id, [User name], [User password], [User e-mail address] FROM [User] WHERE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(RPSLSDB_PrimaryDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(GAMEDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._userTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.User.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1168,7 +1166,7 @@ SELECT Id, [User name], [User password], [User e-mail address] FROM [User] WHERE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(RPSLSDB_PrimaryDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(GAMEDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._userTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.User.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1186,7 +1184,7 @@ SELECT Id, [User name], [User password], [User e-mail address] FROM [User] WHERE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(RPSLSDB_PrimaryDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(GAMEDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._userTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.User.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1228,7 +1226,7 @@ SELECT Id, [User name], [User password], [User e-mail address] FROM [User] WHERE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(RPSLSDB_PrimaryDataSet dataSet) {
+        public virtual int UpdateAll(GAMEDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

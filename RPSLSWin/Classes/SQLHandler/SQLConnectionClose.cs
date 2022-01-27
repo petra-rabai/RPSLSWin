@@ -1,24 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Configuration;
-
 
 namespace RPSLSWin
 {
-   public class SQLConnectionOpen : ISQLConnectionData, ISQLConnectionOpen
+    public class SQLConnectionClose: ISQLConnectionData, ISQLConnectionClose
     {
-        public string ConnectionString { get; set; } = Properties.Settings.Default.RPSLSDB_PrimaryConnectionString;
+        public string ConnectionString { get; set; } = Properties.Settings.Default.GAMEConnectionString;
         public SqlConnection DbConnection { get; set; }
-
-        public void ConnectionOpen()
+        public void ConnectionClose()
         {
             DbConnection = new SqlConnection(ConnectionString);
-            DbConnection.Open();
+            DbConnection.Close();
         }
     }
 }

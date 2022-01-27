@@ -54,5 +54,12 @@ namespace RPSLSWin
 
             
         }
+
+        private void FormUserLogin_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'gAMEDataSet.User' table. You can move, or remove it, as needed.
+            this.userTableAdapter.Fill(this.gAMEDataSet.User);
+
+        }
     }
 }

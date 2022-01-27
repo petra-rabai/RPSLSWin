@@ -9,7 +9,7 @@ namespace RPSLSWin
 {
     public class SQLConnectionData : ISQLConnectionData
     {
-        public string ConnectionString { get; set; } = Properties.Settings.Default.RPSLSDB_PrimaryConnectionString;
+        public string ConnectionString { get; set; } = Properties.Settings.Default.GAMEConnectionString;
         public SqlConnection DbConnection { get; set; }
     }
 }

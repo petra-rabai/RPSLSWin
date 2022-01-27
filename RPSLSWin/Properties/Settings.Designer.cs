@@ -26,11 +26,11 @@ namespace RPSLSWin.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\RPSLSDB_Prima" +
-            "ry.mdf;Integrated Security=True;Connect Timeout=30")]
-        public string RPSLSDB_PrimaryConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database\\GAME" +
+            ".mdf;Integrated Security=True;Connect Timeout=30")]
+        public string GAMEConnectionString {
             get {
-                return ((string)(this["RPSLSDB_PrimaryConnectionString"]));
+                return ((string)(this["GAMEConnectionString"]));
             }
         }
     }

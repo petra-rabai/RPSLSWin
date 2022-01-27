@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -62,49 +62,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISQLActionData.cs" />
-    <Compile Include="ISQLActionInsertData.cs" />
-    <Compile Include="ISQLActionSelectData.cs" />
-    <Compile Include="ISQLConnectionClose.cs" />
-    <Compile Include="ISQLConnectionData.cs" />
-    <Compile Include="ISQLConnectionOpen.cs" />
-    <Compile Include="SQLActionInsertData.cs" />
-    <Compile Include="SQLActionSelectData.cs" />
-    <Compile Include="SQLConnectionClose.cs" />
-    <Compile Include="SQLConnectionData.cs" />
-    <Compile Include="SQLConnectionOpen.cs" />
-    <Compile Include="FormUserLogin.cs">
+    <Compile Include="Database\GAMEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GAMEDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ISQLHandler\ISQLActionData.cs" />
+    <Compile Include="Interfaces\ISQLHandler\ISQLActionInsertData.cs" />
+    <Compile Include="Interfaces\ISQLHandler\ISQLActionSelectData.cs" />
+    <Compile Include="Interfaces\ISQLHandler\ISQLConnectionClose.cs" />
+    <Compile Include="Interfaces\ISQLHandler\ISQLConnectionData.cs" />
+    <Compile Include="Interfaces\ISQLHandler\ISQLConnectionOpen.cs" />
+    <Compile Include="Classes\SQLHandler\SQLActionInsertData.cs" />
+    <Compile Include="Classes\SQLHandler\SQLActionSelectData.cs" />
+    <Compile Include="Classes\SQLHandler\SQLConnectionClose.cs" />
+    <Compile Include="Classes\SQLHandler\SQLConnectionData.cs" />
+    <Compile Include="Classes\SQLHandler\SQLConnectionOpen.cs" />
+    <Compile Include="Forms\FormUserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUserLogin.Designer.cs">
+    <Compile Include="Forms\FormUserLogin.Designer.cs">
       <DependentUpon>FormUserLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormInitialize.cs">
+    <Compile Include="Forms\FormInitialize.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormInitialize.Designer.cs">
+    <Compile Include="Forms\FormInitialize.Designer.cs">
       <DependentUpon>FormInitialize.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUserRegistration.cs">
+    <Compile Include="Forms\FormUserRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUserRegistration.Designer.cs">
+    <Compile Include="Forms\FormUserRegistration.Designer.cs">
       <DependentUpon>FormUserRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RPSLSDB_PrimaryDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RPSLSDB_PrimaryDataSet.xsd</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="FormUserLogin.resx">
+    <EmbeddedResource Include="Forms\FormUserLogin.resx">
       <DependentUpon>FormUserLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormInitialize.resx">
+    <EmbeddedResource Include="Forms\FormInitialize.resx">
       <DependentUpon>FormInitialize.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUserRegistration.resx">
+    <EmbeddedResource Include="Forms\FormUserRegistration.resx">
       <DependentUpon>FormUserRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -115,7 +115,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Database\GAMEDataSet.xsc">
+      <DependentUpon>GAMEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database\GAMEDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GAMEDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database\GAMEDataSet.xss">
+      <DependentUpon>GAMEDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,29 +137,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="RPSLSDB_PrimaryDataSet.xsc">
-      <DependentUpon>RPSLSDB_PrimaryDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="RPSLSDB_PrimaryDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RPSLSDB_PrimaryDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RPSLSDB_PrimaryDataSet.xss">
-      <DependentUpon>RPSLSDB_PrimaryDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="RPSLSDB_Primary.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="RPSLSDB_Primary_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>RPSLSDB_Primary.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -160,6 +152,24 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\GAME.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\GAME_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>GAME.mdf</DependentUpon>
+    </Content>
+    <None Include="icons\UserSaved.png" />
+    <None Include="icons\UserEmail.png" />
+    <None Include="icons\UserRegistration.png" />
+    <None Include="icons\UserLogin.png" />
+    <None Include="icons\UserPassword.png" />
+    <None Include="icons\UserName.png" />
+    <None Include="icons\QuitButton.png" />
+    <None Include="icons\StartButton.png" />
+    <None Include="icons\CompanyLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
