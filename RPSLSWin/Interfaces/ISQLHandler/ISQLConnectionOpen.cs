@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLSWin
 {
-    internal interface ISQLConnectionOpen
+    public interface ISQLConnectionOpen
     {
         void ConnectionOpen();
     }

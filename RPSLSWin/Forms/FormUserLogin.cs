@@ -31,13 +31,24 @@ namespace RPSLSWin
 
         private void buttonUserLogin_Click(object sender, EventArgs e)
         {
+            string userName = textBoxUserName.Text;
+            string userPassword = textBoxUserPassword.Text;
+            UserErrorHandling userErrorHandling = new UserErrorHandling();
+
+            if ((userName == "")||(userPassword == ""))
+            {
+                userErrorHandling.messageBoxType = "Error";
+                userErrorHandling.messageBoxMessage = "Please fill the User name and Password field!";
+                userErrorHandling.CreateMessageBox();
+            }
+            
             SQLConnectionOpen sQLConnectionInitialize = new SQLConnectionOpen();
             SQLActionSelectData sQLActionSelectData = new SQLActionSelectData();
             SQLConnectionClose sQLConnectionClose = new SQLConnectionClose();
             DataTable loginUserValidation = new DataTable();
             
             sQLConnectionInitialize.ConnectionOpen();
-            sQLActionSelectData.sqlStatement = "SELECT COUNT(*) FROM [dbo].[User] WHERE [User name]= " + "'" +textBoxUserName.Text +"'" + " AND [User password]=" +"'" + textBoxUserPassword.Text+"'";
+            sQLActionSelectData.sqlStatement = "SELECT COUNT(*) FROM [dbo].[User] WHERE [UserName]= " + "'" +textBoxUserName.Text +"'" + " AND [UserPassword]=" +"'" + textBoxUserPassword.Text+"'";
             sQLActionSelectData.SQLSelectData(sQLConnectionInitialize);
             sQLActionSelectData.sqlDataAdapter.Fill(loginUserValidation);
             

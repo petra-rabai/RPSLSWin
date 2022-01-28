@@ -31,7 +31,7 @@ namespace RPSLSWin
             SQLConnectionClose sQLConnectionClose = new SQLConnectionClose();
 
             sQLConnectionInitialize.ConnectionOpen();
-            sQLActionInsertData.sqlStatement = "INSERT INTO [dbo].[User] ([User name], [User password], [User e-mail address]) values (" + "'"+ textBoxUserNameRegistration.Text + "'" + ","+ "'" + textBoxUserPasswordRegistration.Text + "'" + "," + "'" + textBoxEmailaddress.Text + "'" + ")";
+            sQLActionInsertData.sqlStatement = "INSERT INTO [dbo].[User] ([UserName], [UserPassword], [UserEmail]) values (" + "'"+ textBoxUserNameRegistration.Text + "'" + ","+ "'" + textBoxUserPasswordRegistration.Text + "'" + "," + "'" + textBoxEmailaddress.Text + "'" + ")";
             sQLActionInsertData.SQLInsertData(sQLConnectionInitialize);
             sQLConnectionClose.ConnectionClose();
             

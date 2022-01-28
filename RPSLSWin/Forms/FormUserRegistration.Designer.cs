@@ -32,6 +32,9 @@
             this.panelUserRegistration = new System.Windows.Forms.Panel();
             this.labelRegistrationWindow = new System.Windows.Forms.Label();
             this.panelUserData = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxUserNameRegistration = new System.Windows.Forms.TextBox();
             this.gAMEDataSet = new RPSLSWin.Database.GAMEDataSet();
             this.textBoxUserPasswordRegistration = new System.Windows.Forms.TextBox();
@@ -39,19 +42,16 @@
             this.labelUserPasswordRegistration = new System.Windows.Forms.Label();
             this.textBoxEmailaddress = new System.Windows.Forms.TextBox();
             this.labelUserNameRegistration = new System.Windows.Forms.Label();
-            this.bindingSourceGameDB = new System.Windows.Forms.BindingSource(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonUserRegister = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.bindingSourceGameDB = new System.Windows.Forms.BindingSource(this.components);
             this.panelUserRegistration.SuspendLayout();
             this.panelUserData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gAMEDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGameDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gAMEDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGameDB)).BeginInit();
             this.SuspendLayout();
             // 
             // panelUserRegistration
@@ -62,14 +62,14 @@
             this.panelUserRegistration.Controls.Add(this.buttonBack);
             this.panelUserRegistration.Location = new System.Drawing.Point(12, 12);
             this.panelUserRegistration.Name = "panelUserRegistration";
-            this.panelUserRegistration.Size = new System.Drawing.Size(776, 426);
+            this.panelUserRegistration.Size = new System.Drawing.Size(332, 351);
             this.panelUserRegistration.TabIndex = 0;
             // 
             // labelRegistrationWindow
             // 
             this.labelRegistrationWindow.AutoSize = true;
             this.labelRegistrationWindow.Font = new System.Drawing.Font("Cascadia Code", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegistrationWindow.Location = new System.Drawing.Point(310, 10);
+            this.labelRegistrationWindow.Location = new System.Drawing.Point(86, 10);
             this.labelRegistrationWindow.Name = "labelRegistrationWindow";
             this.labelRegistrationWindow.Size = new System.Drawing.Size(156, 27);
             this.labelRegistrationWindow.TabIndex = 18;
@@ -87,11 +87,41 @@
             this.panelUserData.Controls.Add(this.labelUserPasswordRegistration);
             this.panelUserData.Controls.Add(this.textBoxEmailaddress);
             this.panelUserData.Controls.Add(this.labelUserNameRegistration);
-            this.panelUserData.Location = new System.Drawing.Point(235, 43);
+            this.panelUserData.Location = new System.Drawing.Point(11, 43);
             this.panelUserData.Margin = new System.Windows.Forms.Padding(2);
             this.panelUserData.Name = "panelUserData";
             this.panelUserData.Size = new System.Drawing.Size(310, 226);
             this.panelUserData.TabIndex = 17;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::RPSLSWin.Properties.Resources.UserEmail;
+            this.pictureBox3.Location = new System.Drawing.Point(71, 151);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 21;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::RPSLSWin.Properties.Resources.UserPassword;
+            this.pictureBox2.Location = new System.Drawing.Point(71, 83);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RPSLSWin.Properties.Resources.UserName;
+            this.pictureBox1.Location = new System.Drawing.Point(71, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
             // textBoxUserNameRegistration
             // 
@@ -156,47 +186,12 @@
             this.labelUserNameRegistration.TabIndex = 11;
             this.labelUserNameRegistration.Text = "User name: ";
             // 
-            // bindingSourceGameDB
-            // 
-            this.bindingSourceGameDB.DataSource = this.gAMEDataSet;
-            this.bindingSourceGameDB.Position = 0;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::RPSLSWin.Properties.Resources.UserEmail;
-            this.pictureBox3.Location = new System.Drawing.Point(71, 151);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 21;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::RPSLSWin.Properties.Resources.UserPassword;
-            this.pictureBox2.Location = new System.Drawing.Point(71, 83);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 20;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RPSLSWin.Properties.Resources.UserName;
-            this.pictureBox1.Location = new System.Drawing.Point(71, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
             // buttonUserRegister
             // 
             this.buttonUserRegister.Font = new System.Drawing.Font("Cascadia Code SemiLight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUserRegister.Image = global::RPSLSWin.Properties.Resources.UserSaved;
             this.buttonUserRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUserRegister.Location = new System.Drawing.Point(3, 391);
+            this.buttonUserRegister.Location = new System.Drawing.Point(107, 274);
             this.buttonUserRegister.Name = "buttonUserRegister";
             this.buttonUserRegister.Size = new System.Drawing.Size(139, 32);
             this.buttonUserRegister.TabIndex = 4;
@@ -210,7 +205,7 @@
             this.buttonBack.Font = new System.Drawing.Font("Cascadia Code SemiLight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBack.Image = global::RPSLSWin.Properties.Resources.QuitButton;
             this.buttonBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBack.Location = new System.Drawing.Point(677, 391);
+            this.buttonBack.Location = new System.Drawing.Point(127, 312);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(96, 32);
             this.buttonBack.TabIndex = 5;
@@ -219,11 +214,16 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // bindingSourceGameDB
+            // 
+            this.bindingSourceGameDB.DataSource = this.gAMEDataSet;
+            this.bindingSourceGameDB.Position = 0;
+            // 
             // FormUserRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(353, 372);
             this.ControlBox = false;
             this.Controls.Add(this.panelUserRegistration);
             this.Name = "FormUserRegistration";
@@ -234,11 +234,11 @@
             this.panelUserRegistration.PerformLayout();
             this.panelUserData.ResumeLayout(false);
             this.panelUserData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gAMEDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGameDB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gAMEDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceGameDB)).EndInit();
             this.ResumeLayout(false);
 
         }

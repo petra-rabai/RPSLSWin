@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLSWin
 {
-    internal interface ISQLConnectionClose
+    public interface ISQLConnectionClose
     {
         void ConnectionClose();
     }
