@@ -19,7 +19,8 @@ namespace RPSLSWin
 
         private void buttonQuit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            ApplicationQuit applicationQuit = new ApplicationQuit();
+            applicationQuit.Quit();
         }
 
         private void buttonNewUserRegister_Click(object sender, EventArgs e)
@@ -58,7 +59,9 @@ namespace RPSLSWin
             }
             else
             {
-                MessageBox.Show("Invalid user name or password");
+                userErrorHandling.messageBoxType = "Error";
+                userErrorHandling.messageBoxMessage = "Invalid user name or password";
+                userErrorHandling.CreateMessageBox();
             }
 
             sQLConnectionClose.ConnectionClose();

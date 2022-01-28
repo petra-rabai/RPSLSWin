@@ -45,7 +45,8 @@ namespace RPSLSWin
 
         private void buttonQuitApp_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            ApplicationQuit applicationQuit = new ApplicationQuit();
+            applicationQuit.Quit();
         }
 
         private void buttonStartApp_Click(object sender, EventArgs e)

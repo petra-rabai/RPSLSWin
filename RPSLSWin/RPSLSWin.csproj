@@ -62,12 +62,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ApplicationHandler\ApplicationQuit.cs" />
     <Compile Include="Classes\UserErrorHandler\UserErrorHandling.cs" />
     <Compile Include="Database\GAMEDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GAMEDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IApplicationHandler\IApplicationQuit.cs" />
     <Compile Include="Interfaces\ISQLHandler\ISQLActionData.cs" />
     <Compile Include="Interfaces\ISQLHandler\ISQLActionInsertData.cs" />
     <Compile Include="Interfaces\ISQLHandler\ISQLActionSelectData.cs" />

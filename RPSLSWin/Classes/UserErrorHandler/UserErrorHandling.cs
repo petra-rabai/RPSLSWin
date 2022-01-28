@@ -14,17 +14,25 @@ namespace RPSLSWin
         public string messageBoxType { get; set; } = "";
         public string messageBoxMessage { get; set; } = "";
         public string messageBoxCaption { get; set; } = "";
+        public DialogResult dialogResult { get; set; }
 
         public void CreateMessageBox()
         {
             switch (messageBoxType)
             {
                 case "Error":
-                    MessageBoxIcon MessageBoxIcon = MessageBoxIcon.Error;
-                    MessageBoxButtons MessageBoxButtons = MessageBoxButtons.OK;
+                    MessageBoxIcon MessageBoxIconError = MessageBoxIcon.Error;
+                    MessageBoxButtons MessageBoxButtonsError = MessageBoxButtons.OK;
                     messageBoxCaption = "User interaction error";
-                    MessageBox.Show(messageBoxMessage,messageBoxCaption,MessageBoxButtons,MessageBoxIcon);
+                    MessageBox.Show(messageBoxMessage,messageBoxCaption, MessageBoxButtonsError, MessageBoxIconError);
                     break;
+                case "Question":
+                    MessageBoxIcon MessageBoxIconQuestion = MessageBoxIcon.Question;
+                    MessageBoxButtons MessageBoxButtonsQuestion = MessageBoxButtons.YesNo;
+                    messageBoxCaption = "User question";
+                    dialogResult = MessageBox.Show(messageBoxMessage, messageBoxCaption, MessageBoxButtonsQuestion, MessageBoxIconQuestion);
+                    break;
+
                 default:
                     break;
 

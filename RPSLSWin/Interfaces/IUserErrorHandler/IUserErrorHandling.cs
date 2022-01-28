@@ -11,6 +11,7 @@ namespace RPSLSWin
     {
         MessageBoxIcon MessageBoxIcon { get; set; }
         MessageBoxButtons MessageBoxButtons { get; set; }
+        DialogResult dialogResult { get; set; }
         string messageBoxType { get; set; }
         string messageBoxMessage { get; set; }
         string messageBoxCaption { get; set; }
