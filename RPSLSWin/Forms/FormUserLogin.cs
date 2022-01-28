@@ -66,7 +66,6 @@ namespace RPSLSWin
 
             sQLConnectionClose.ConnectionClose();
 
-            
         }
 
         private void FormUserLogin_Load(object sender, EventArgs e)

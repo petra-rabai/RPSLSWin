@@ -32,7 +32,12 @@ namespace RPSLSWin
                     messageBoxCaption = "User question";
                     dialogResult = MessageBox.Show(messageBoxMessage, messageBoxCaption, MessageBoxButtonsQuestion, MessageBoxIconQuestion);
                     break;
-
+                case "Info":
+                    MessageBoxIcon MessageBoxIconInfo = MessageBoxIcon.Information;
+                    MessageBoxButtons MessageBoxButtonsInfo = MessageBoxButtons.OK;
+                    messageBoxCaption = "User information";
+                    dialogResult = MessageBox.Show(messageBoxMessage, messageBoxCaption, MessageBoxButtonsInfo, MessageBoxIconInfo);
+                    break;
                 default:
                     break;
 

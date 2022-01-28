@@ -26,6 +26,18 @@ namespace RPSLSWin
 
         private void buttonUserRegister_Click(object sender, EventArgs e)
         {
+            string userName = textBoxUserNameRegistration.Text;
+            string userPassword = textBoxUserPasswordRegistration.Text;
+            string userEmail = textBoxEmailaddress.Text;
+            UserErrorHandling userErrorHandling = new UserErrorHandling();
+
+            if ((userName == "") || (userPassword == "") || (userEmail == ""))
+            {
+                userErrorHandling.messageBoxType = "Error";
+                userErrorHandling.messageBoxMessage = "Please fill all fields on the Registration form!";
+                userErrorHandling.CreateMessageBox();
+            }
+
             SQLConnectionOpen sQLConnectionInitialize = new SQLConnectionOpen();
             SQLActionInsertData sQLActionInsertData = new SQLActionInsertData();
             SQLConnectionClose sQLConnectionClose = new SQLConnectionClose();
@@ -33,9 +45,12 @@ namespace RPSLSWin
             sQLConnectionInitialize.ConnectionOpen();
             sQLActionInsertData.sqlStatement = "INSERT INTO [dbo].[User] ([UserName], [UserPassword], [UserEmail]) values (" + "'"+ textBoxUserNameRegistration.Text + "'" + ","+ "'" + textBoxUserPasswordRegistration.Text + "'" + "," + "'" + textBoxEmailaddress.Text + "'" + ")";
             sQLActionInsertData.SQLInsertData(sQLConnectionInitialize);
+            userErrorHandling.messageBoxType = "Info";
+            userErrorHandling.messageBoxMessage = "User registration success.";
+            userErrorHandling.CreateMessageBox();
             sQLConnectionClose.ConnectionClose();
             
-            MessageBox.Show("User registration success");
+            
         }
     }
 }
