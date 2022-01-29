@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 
 
-namespace RPSLSWin
+namespace GameBox
 {
    public class SQLConnectionOpen : ISQLConnectionData, ISQLConnectionOpen
     {

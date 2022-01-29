@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RPSLSWin
+namespace GameBox
 {
     internal static class Program
     {

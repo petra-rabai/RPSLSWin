@@ -1,4 +1,4 @@
-﻿namespace RPSLSWin
+﻿namespace GameBox
 {
     partial class FormUserLogin
     {
@@ -34,9 +34,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gAMEDataSet = new RPSLSWin.Database.GAMEDataSet();
+            this.gAMEDataSet = new GameBox.Database.GAMEDataSet();
             this.textBoxUserPassword = new System.Windows.Forms.TextBox();
-            this.userTableAdapter = new RPSLSWin.Database.GAMEDataSetTableAdapters.UserTableAdapter();
+            this.userTableAdapter = new GameBox.Database.GAMEDataSetTableAdapters.UserTableAdapter();
             this.labelUserNamelogin = new System.Windows.Forms.Label();
             this.labelUserPasswordlogin = new System.Windows.Forms.Label();
             this.buttonQuit = new System.Windows.Forms.Button();
@@ -143,7 +143,7 @@
             // buttonQuit
             // 
             this.buttonQuit.Font = new System.Drawing.Font("Cascadia Code SemiLight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonQuit.Image = global::RPSLSWin.Properties.Resources.QuitButton;
+            this.buttonQuit.Image = global::GameBox.Properties.Resources.QuitButton;
             this.buttonQuit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonQuit.Location = new System.Drawing.Point(416, 301);
             this.buttonQuit.Name = "buttonQuit";
@@ -156,7 +156,7 @@
             // 
             // pictureBoxUserPassword
             // 
-            this.pictureBoxUserPassword.Image = global::RPSLSWin.Properties.Resources.UserPassword;
+            this.pictureBoxUserPassword.Image = global::GameBox.Properties.Resources.UserPassword;
             this.pictureBoxUserPassword.Location = new System.Drawing.Point(52, 92);
             this.pictureBoxUserPassword.Name = "pictureBoxUserPassword";
             this.pictureBoxUserPassword.Size = new System.Drawing.Size(24, 24);
@@ -166,7 +166,7 @@
             // 
             // pictureBoxUserName
             // 
-            this.pictureBoxUserName.Image = global::RPSLSWin.Properties.Resources.UserName;
+            this.pictureBoxUserName.Image = global::GameBox.Properties.Resources.UserName;
             this.pictureBoxUserName.Location = new System.Drawing.Point(56, 26);
             this.pictureBoxUserName.Name = "pictureBoxUserName";
             this.pictureBoxUserName.Size = new System.Drawing.Size(24, 24);
@@ -177,7 +177,7 @@
             // buttonNewUserRegister
             // 
             this.buttonNewUserRegister.Font = new System.Drawing.Font("Cascadia Code SemiLight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNewUserRegister.Image = global::RPSLSWin.Properties.Resources.UserRegistration;
+            this.buttonNewUserRegister.Image = global::GameBox.Properties.Resources.UserRegistration;
             this.buttonNewUserRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonNewUserRegister.Location = new System.Drawing.Point(57, 215);
             this.buttonNewUserRegister.Name = "buttonNewUserRegister";
@@ -191,7 +191,7 @@
             // buttonUserLogin
             // 
             this.buttonUserLogin.Font = new System.Drawing.Font("Cascadia Code SemiLight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUserLogin.Image = global::RPSLSWin.Properties.Resources.UserLogin;
+            this.buttonUserLogin.Image = global::GameBox.Properties.Resources.UserLogin;
             this.buttonUserLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonUserLogin.Location = new System.Drawing.Point(84, 177);
             this.buttonUserLogin.Name = "buttonUserLogin";

@@ -1,4 +1,4 @@
-﻿namespace RPSLSWin
+﻿namespace GameBox
 {
     partial class FormInitialize
     {
@@ -77,7 +77,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::RPSLSWin.Properties.Resources.CompanyLogo;
+            this.pictureBox1.Image = global::GameBox.Properties.Resources.CompanyLogo;
             this.pictureBox1.Location = new System.Drawing.Point(103, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 200);
@@ -88,7 +88,7 @@
             // buttonStartApp
             // 
             this.buttonStartApp.Font = new System.Drawing.Font("Cascadia Code SemiLight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStartApp.Image = global::RPSLSWin.Properties.Resources.StartButton;
+            this.buttonStartApp.Image = global::GameBox.Properties.Resources.StartButton;
             this.buttonStartApp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonStartApp.Location = new System.Drawing.Point(3, 101);
             this.buttonStartApp.Name = "buttonStartApp";
@@ -101,7 +101,7 @@
             // buttonQuitApp
             // 
             this.buttonQuitApp.Font = new System.Drawing.Font("Cascadia Code SemiLight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonQuitApp.Image = global::RPSLSWin.Properties.Resources.QuitButton;
+            this.buttonQuitApp.Image = global::GameBox.Properties.Resources.QuitButton;
             this.buttonQuitApp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonQuitApp.Location = new System.Drawing.Point(255, 101);
             this.buttonQuitApp.Name = "buttonQuitApp";

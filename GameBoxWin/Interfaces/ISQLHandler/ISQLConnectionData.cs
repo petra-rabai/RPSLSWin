@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 
-namespace RPSLSWin
+namespace GameBox
 {
     public interface ISQLConnectionData
     {

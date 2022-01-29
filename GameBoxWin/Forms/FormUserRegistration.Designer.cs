@@ -1,4 +1,4 @@
-﻿namespace RPSLSWin
+﻿namespace GameBox
 {
     partial class FormUserRegistration
     {
@@ -36,7 +36,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxUserNameRegistration = new System.Windows.Forms.TextBox();
-            this.gAMEDataSet = new RPSLSWin.Database.GAMEDataSet();
+            this.gAMEDataSet = new GameBox.Database.GAMEDataSet();
             this.textBoxUserPasswordRegistration = new System.Windows.Forms.TextBox();
             this.labelUserEmailRegistration = new System.Windows.Forms.Label();
             this.labelUserPasswordRegistration = new System.Windows.Forms.Label();
@@ -95,7 +95,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::RPSLSWin.Properties.Resources.UserEmail;
+            this.pictureBox3.Image = global::GameBox.Properties.Resources.UserEmail;
             this.pictureBox3.Location = new System.Drawing.Point(71, 151);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 24);
@@ -105,7 +105,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::RPSLSWin.Properties.Resources.UserPassword;
+            this.pictureBox2.Image = global::GameBox.Properties.Resources.UserPassword;
             this.pictureBox2.Location = new System.Drawing.Point(71, 83);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
@@ -115,7 +115,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::RPSLSWin.Properties.Resources.UserName;
+            this.pictureBox1.Image = global::GameBox.Properties.Resources.UserName;
             this.pictureBox1.Location = new System.Drawing.Point(71, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
@@ -189,7 +189,7 @@
             // buttonUserRegister
             // 
             this.buttonUserRegister.Font = new System.Drawing.Font("Cascadia Code SemiLight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUserRegister.Image = global::RPSLSWin.Properties.Resources.UserSaved;
+            this.buttonUserRegister.Image = global::GameBox.Properties.Resources.UserSaved;
             this.buttonUserRegister.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonUserRegister.Location = new System.Drawing.Point(107, 274);
             this.buttonUserRegister.Name = "buttonUserRegister";
@@ -203,7 +203,7 @@
             // buttonBack
             // 
             this.buttonBack.Font = new System.Drawing.Font("Cascadia Code SemiLight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack.Image = global::RPSLSWin.Properties.Resources.QuitButton;
+            this.buttonBack.Image = global::GameBox.Properties.Resources.QuitButton;
             this.buttonBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonBack.Location = new System.Drawing.Point(127, 312);
             this.buttonBack.Name = "buttonBack";

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace RPSLSWin.Database {
+namespace GameBox.Database {
     
     
     /// <summary>
@@ -676,7 +676,7 @@ namespace RPSLSWin.Database {
         }
     }
 }
-namespace RPSLSWin.Database.GAMEDataSetTableAdapters {
+namespace GameBox.Database.GAMEDataSetTableAdapters {
     
     
     /// <summary>
@@ -843,7 +843,7 @@ SELECT id, UserName, UserPassword, UserEmail FROM [User] WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::RPSLSWin.Properties.Settings.Default.GAMEConnectionString;
+            this._connection.ConnectionString = global::GameBox.Properties.Settings.Default.GAMEConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
